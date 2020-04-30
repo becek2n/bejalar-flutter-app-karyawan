@@ -15,7 +15,7 @@ class _KaryawanState extends State<Karyawan>{
         _ctrTxtPhone = TextEditingController(),
         _ctrTxtEmail = TextEditingController();
 
-  int _idDepartment, _valueJabatan;
+  int _idDepartment, _idJabatan;
   List<DropdownClass> _jabatan = new List<DropdownClass>();
   List<DropdownClass> _department = new List<DropdownClass>();
   
@@ -141,7 +141,7 @@ class _KaryawanState extends State<Karyawan>{
                         ),
                         child: new DropdownButtonHideUnderline(
                           child: new DropdownButton(
-                            value: _valueJabatan,
+                            value: _idJabatan,
                             isDense: true,
                             onChanged: (newValue) {
                               setState(() {
@@ -179,7 +179,6 @@ class _KaryawanState extends State<Karyawan>{
                     ),
                   ],
                 )
-                
               ],
             ),
           )
