@@ -1,4 +1,5 @@
 import 'package:belajar_flutter_karywan_app/HeaderMenu.dart';
+import 'package:belajar_flutter_karywan_app/Karyawan.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatefulWidget {
@@ -79,7 +80,7 @@ class _MainMenu extends State<MainMenu>
           children: [
             Padding(
               padding: EdgeInsets.all(10.0),
-              child: Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),),
+              child: Text("Menu", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),),
             ),
             
             GridView(
@@ -136,6 +137,10 @@ class _MainMenu extends State<MainMenu>
           onTap: () {
             //mengatasi klik untuk masing-masing icon 
             if (imageText == "Karyawan"){
+               Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
+                  new Karyawan() 
+                )
+              );
             }
             if(imageText == "Absen"){
             }
