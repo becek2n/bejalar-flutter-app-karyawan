@@ -1,5 +1,6 @@
 import 'package:belajar_flutter_karywan_app/HeaderMenu.dart';
 import 'package:belajar_flutter_karywan_app/Karyawan.dart';
+import 'package:belajar_flutter_karywan_app/KaryawanReport.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatefulWidget {
@@ -145,6 +146,10 @@ class _MainMenu extends State<MainMenu>
             if(imageText == "Absen"){
             }
             if(imageText == "Laporan"){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
+                  new KaryawanReport() 
+                )
+              );
             }
             if(imageText == "Logout"){
             }
